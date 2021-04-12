@@ -1,0 +1,56 @@
+Model: FasterRCNN
+Transforms:
+- Normalize:
+    mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+- ResizeByShort:
+    max_size: 800
+    short_size: 600
+- Padding:
+    coarsest_stride: 32
+    target_size: null
+TransformsMode: RGB
+_Attributes:
+  eval_metrics:
+    bbox_map: 95.45454545454545
+  fixed_input_shape: null
+  labels:
+  - background
+  - cat
+  - dog
+  model_type: detector
+  num_classes: 3
+_ModelInputsOutputs:
+  test_inputs:
+  - - image
+    - image
+  - - im_info
+    - im_info
+  - - im_shape
+    - im_shape
+  test_outputs:
+  - - bbox
+    - multiclass_nms_0.tmp_0
+_init_params:
+  anchor_sizes:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  aspect_ratios:
+  - 0.5
+  - 1.0
+  - 2.0
+  backbone: ResNet50
+  num_classes: 3
+  with_fpn: true
+completed_epochs: 0
+status: Infer
+version: 1.2.8
