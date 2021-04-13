@@ -1,5 +1,7 @@
 # 猫狗检测器
 
-兴趣使然。代码简单，仅供娱乐。
+兴趣使然。
 
-基于paddleX开源框架训练的模型并在本地部署。"# a-simple-cat_dog_detector" 
+代码简单，仅供娱乐。
+
+![image-20210413100622029](C:\Users\12168\AppData\Roaming\Typora\typora-user-images\image-20210413100622029.png)
